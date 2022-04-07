@@ -3,6 +3,7 @@
     <Header/>
     <Slide/>
     <Jumbotron/>
+    <Main/>
   </div>
 </template>
 
@@ -10,6 +11,8 @@
 import Header from './components/Header.vue'
 import Slide from './components/Slide.vue'
 import Jumbotron from './components/Jumbotron.vue'
+import Main from './components/Main.vue'
+
 
 
 
@@ -19,6 +22,7 @@ export default {
     Header,
     Slide,
     Jumbotron,
+    Main,
   }
 }
 </script>
