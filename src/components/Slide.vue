@@ -8,7 +8,7 @@
                         <div class="my-carousel-images d-flex justify-content-end">
                             <!-- immagini -->
                             <div class="carousel-text col-3 text-start">
-                                <p>Devotion that never <span class="fw-bold">ends</span> </p>
+                                <p class="fs-1">Devotion that never <span class="fw-bold fst-italic">ends</span> </p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod Lorem ipsum dolor </p>
                                 <button class="btn btn-light fw-bold">READ MORE</button>
                             </div>

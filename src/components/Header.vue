@@ -1,17 +1,19 @@
 <template>
 <header>
-  <div class="container-fluid">
+  <div class="container-fluid p-2">
     <div class="row justify-content-between">
       <div class="header-logo col-1">
-        <img src="/images/logo-sidearea-1.png" alt="" class="img-fluid">
+        <img src="/images/logo-sidearea-1.png" alt="" class="my-logo-size">
+        </div>
+          <nav class="header-nav col-6">
+            <ul class="d-flex justify-content-between">
+              <li v-for="(headerLink, index) in NavList" :key="index">
+                <a href="#">{{headerLink.link}}</a>
+              </li>
+              <img src="/images/svg-1.svg" alt="" class="img-fluid">
+            </ul>
+          </nav>
       </div>
-      <nav class="header-nav col-6 ">
-        <ul class="d-flex justify-content-between">
-          <li v-for="(headerLink, index) in NavList" :key="index">{{headerLink.link}}</li>
-          <img src="/images/svg-1.svg" alt="" class="img-fluid">
-        </ul>
-      </nav>
-    </div>
   </div>
 </header>
 </template>
@@ -23,21 +25,27 @@ export default {
     return{
       NavList: [{
         link:"HOME",
+        url : "#",
       },
       {
         link:"PAGES",
+        url : "#",
       },
       {
         link:"PORTFOLIO",
+        url : "#",
       },
       {
         link:"BLOG",
+        url : "#",
       },
       {
         link:"SHOP",
+        url : "#",
       },
       {
         link:"ELEMENTS",
+        url : "#",
       },
       ],
     }
@@ -48,20 +56,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 div.container-fluid{
-  div.header-logo{
-    border: 2px solid black;
-
-  }
-  nav.header-nav{
-    border: 2px solid green;;
-  }
-  ul{
+  height: 50px;
+}
+.my-logo-size{
+  width: 80px;
+}
+ul{
     list-style-type: none;
   }
-  .row{
-    border: 2px solid black;
-    height: 100%;
-  }
-}
-
 </style>
