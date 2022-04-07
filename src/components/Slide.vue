@@ -1,13 +1,18 @@
 <template>
-<div class="container-fluid">
-            <div id="app" class="row text-center">
+<div class="container-fluid position-relative">
+            <div id="" class="row text-center">
                 <div class="col-12 p-3" id="my-before-carousel">
                 </div>
-                <div class="col-12 p-5">
-                    <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel">
-                        <div class="my-carousel-images">
+                <div class="col-12">
+                    <div class="my-carousel-container d-flex flex-column col-11 m-auto" id="my-carousel">
+                        <div class="my-carousel-images d-flex justify-content-end">
                             <!-- immagini -->
-                            <div class="item" v-for="(element, index) in images" :key="index"
+                            <div class="carousel-text col-3 text-start">
+                                <p>Devotion that never <span class="fw-bold">ends</span> </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod Lorem ipsum dolor </p>
+                                <button class="btn btn-light fw-bold">READ MORE</button>
+                            </div>
+                            <div class="item col-7" v-for="(element, index) in images" :key="index"
                                 :class="(index == activeElement) ? 'active' : '' ">
                                 <img class="img-fluid" :src="'./images/' + element.image" :alt="element.title">
                                 <div class="item-description px-3">                            
@@ -85,13 +90,7 @@ body {
 }
 
 div.my-carousel-container {
-    min-height: 700px;
-    min-width: 800px;
-}
-
-div.my-thumbnails {
-    background-color: violet;
-    min-height: 160px;
+    border: 2px solid green;
 }
 
 div.my-previous,
@@ -105,27 +104,28 @@ div.my-next {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    border: 2px solid black;
 }
 
 div.my-previous {
-    left: 1rem;
+    left: .3rem;
 }
 
 div.my-next {
-    right: 1rem;
+    right: .3rem;
 }
 
 div.my-previous>span::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f7fb";
+    content: "O";
     line-height: 30px;
 }
 
 div.my-next>span::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f520";
+    content: "O";
     line-height: 30px;
 }
 
@@ -145,35 +145,13 @@ div.my-carousel-images .item.active {
 div.my-carousel-images img {
     height: 100%;
     width: 100%;
-    max-height: 500px;
+    max-height: 350px;
+    border: 2px solid gold;
 }
-
-div.my-carousel-images .item-description {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    color: white;
-    text-align: end;
+div.carousel-text{
+    border: 2px solid black;
 }
-
-div .my-thumbnails {
-    display: flex;
-    overflow-y: auto;
+button{
+    border: 1px solid brown;
 }
-
-div.thumbnail {
-    flex-basis: 20%;
-    filter: brightness(.4);
-}
-
-div.thumbnail img {
-    height: 100%;
-    width: 100%;
-}
-
-div.my-thumbnails .thumbnail.active {
-    filter: brightness(1);
-    border: 3px rgb(197, 197, 197) solid;
-}
-
 </style>
