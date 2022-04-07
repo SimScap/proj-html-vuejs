@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col-4 p-0" v-for="(img, index) in JumboList" :key="index">
             <img :src="'./images/' + img.imgName" :alt="img.text" class="img-fluid">
+            
         </div>
     </div>
 </div>

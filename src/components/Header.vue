@@ -3,11 +3,12 @@
   <div class="container-fluid">
     <div class="row justify-content-between">
       <div class="header-logo col-1">
-        <img src="" alt="">
+        <img src="/images/logo-sidearea-1.png" alt="" class="img-fluid">
       </div>
       <nav class="header-nav col-6">
         <ul class="d-flex justify-content-between">
           <li v-for="(headerLink, index) in NavList" :key="index">{{headerLink.link}}</li>
+          <img src="/images/svg-1.svg" alt="" class="img-fluid">
         </ul>
       </nav>
     </div>
@@ -50,6 +51,7 @@ div.container-fluid{
   height: 60px;
   div.header-logo{
     border: 2px solid black;
+
   }
   nav.header-nav{
     border: 2px solid green;
