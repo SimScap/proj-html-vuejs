@@ -29,4 +29,5 @@ export default {
 
 <style lang="scss">
 @import '@/style/main-style.scss';
+@import '@/fortawesome/fontawesome-free/css/all.min.css';
 </style>
