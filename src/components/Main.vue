@@ -2,13 +2,13 @@
 <div class="container-fluid">
     <div class="row">
     <div class="col-12 my-container m-auto text-center p-5">
-        <h4>Working Process</h4>
+        <h4>Working <span class="fst-italic fw-bold">Process</span> </h4>
         <div class="process-container d-flex">
-            <div class="process-card align-self-end col-3 " v-for="(process, index) in processList" :key="index">
-                <div class="process-card-logo d-flex justify-content-center m-auto">
+            <div class="process-card align-self-end " v-for="(process, index) in processList" :key="index">
+                <div class="process-card-logo d-flex justify-content-center m-auto mb-3">
                     <span class="align-self-center fs-1"><font-awesome-icon :icon="process.fontAwe" /></span>
                 </div>
-                    <h6>{{process.title}}</h6>
+                    <h6 class="fw-bold">{{process.title}}</h6>
                     <p>{{process.text}}</p>
             </div>
             </div>
@@ -21,7 +21,6 @@
             </div>                    
         </div>
         <div class="event-content">
-
         </div>
     </div>
 </div> 
@@ -54,17 +53,17 @@ export default {
             text: "Lorem ipsum sit conetu adipisc sed be et ore aligua pleasure itself",
         },
         {
-            fontAwe: "",
-            title: "Then we talg about",
+            fontAwe: "fa-solid fa-comment",
+            title: "Then we talk about",
             text: "Lorem ipsum sit conetu adipisc sed be et ore aligua pleasure itself",
         },
         {
-            fontAwe: "...",
+            fontAwe: "fa-solid fa-cloud",
             title: "And we think about",
             text: "Lorem ipsum sit conetu adipisc sed be et ore aligua pleasure itself",
         },
         {
-            fontAwe: "...",
+            fontAwe: "fa-solid fa-pen",
             title: "So we draw along",
             text: "Lorem ipsum sit conetu adipisc sed be et ore aligua pleasure itself",
         },
@@ -101,10 +100,11 @@ div.process-container{
     height: 300px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80%;
+    background-size: 75%;
 }
 div.process-card{
 border: 2px solid green;
+width: 25%;
 }
 div.process-card-logo{
     background-color: rgb(250, 247, 242);
@@ -114,6 +114,15 @@ div.process-card-logo{
 }
 .fa-lightbulb{
     color: rgb(186, 218, 201);
+}
+.fa-comment{
+    color: rgb(249, 221, 93) ;
+}
+.fa-cloud{
+    color: rgb(128, 70, 95);
+}
+.fa-pen{
+    color: rgb(234, 90, 55);
 }
 
 </style>

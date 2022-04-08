@@ -1,24 +1,20 @@
 <template>
 <div class="container-fluid position-relative mb-2">
             <div id="" class="row text-center">
-                <div class="col-12 p-3" id="my-before-carousel">
-                </div>
                 <div class="col-12">
                     <div class="my-carousel-container d-flex flex-column col-11 m-auto" id="my-carousel">
-                        <div class="my-carousel-images d-flex justify-content-end">
+                        <div class="my-carousel-images d-flex justify-content-center">
                             <!-- immagini -->
-                            <div class="carousel-text col-4 text-start">
+                            <div class="carousel-text col-5 text-start p-5">
                                 <p class="fs-1">Devotion that never <span class="fw-bold fst-italic">ends</span> </p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod Lorem ipsum dolor </p>
                                 <button class="fw-bold p-2">READ MORE</button>
                             </div>
-                            <div class="item col-7" v-for="(element, index) in images" :key="index"
+                            <div class="item col-7 p-5" v-for="(element, index) in images" :key="index"
                                 :class="(index == activeElement) ? 'active' : '' ">
                                 <img class="img-fluid" :src="'./images/' + element.image" :alt="element.title">
-                                <div class="item-description px-3">                            
-                                </div>
                             </div>
-                        </div>                      
+                        </div>    
                             <!-- prev -->
                             <div class="my-previous position-absolute">
                                 <span class="my-prev-hook" @click="prevSlide()"></span>
@@ -26,8 +22,7 @@
                             <!-- next -->
                             <div class="my-next position-absolute">
                                 <span class="my-next-hook" @click="nextSlide()"></span>
-                            </div>
-                        
+                            </div>       
                     </div>
                 </div>
             </div>

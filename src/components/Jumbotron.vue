@@ -1,9 +1,11 @@
 <template>
 <div class="container-fluid">
+    <ul id=menu>
+        <li><a href="#"><img src="/images/svg-7.svg" alt="" class="img-fluid bg-light"></a></li>
+    </ul>
     <div class="row">
         <div class="col-4 p-0" v-for="(img, index) in JumboList" :key="index">
-            <img :src="'./images/' + img.imgName" :alt="img.text" class="img-fluid">
-            
+            <img :src="'./images/' + img.imgName" :alt="img.text" class="img-fluid">            
         </div>
     </div>
 </div>
@@ -16,29 +18,27 @@ export default {
         return{
             JumboList : [{
                 imgName:"h-2-port-img-1.jpg",
-                text:"First Jumbotron Pic",
+                text:"Jumbotron Pic",
             },
             {
                 imgName:"h-2-port-img-2.jpg",
-                text:"First Jumbotron Pic",
+                text:"Jumbotron Pic",
             },
             {
                 imgName:"h-2-port-img-3.jpg",
-                text:"First Jumbotron Pic",
-                firstBug:"svg-6.svg",
-                secondBug:"svg-7.svg",
+                text:"Jumbotron Pic",
             },
             {
                 imgName:"h-2-port-img-4.jpg",
-                text:"First Jumbotron Pic",
+                text:"Jumbotron Pic",
             },
             {
                 imgName:"h-2-port-img-5.jpg",
-                text:"First Jumbotron Pic",
+                text:"Jumbotron Pic",
             },
             {
                 imgName:"h-2-port-img-6.jpg",
-                text:"First Jumbotron Pic",
+                text:"Jumbotron Pic",
             },
         ],
         }
@@ -49,5 +49,13 @@ export default {
 <style scoped lang="scss">
 .row{
     border: 2px solid purple;
+}
+#menu {
+position: fixed;
+right: 0;
+top: 30%;
+width: 4em;
+border: 2px solid magenta;
+list-style-type: none;
 }
 </style>

@@ -59,7 +59,7 @@ div.container-fluid{
   height: 50px;
 }
 .my-logo-size{
-  width: 80px;
+  width: 100px;
 }
 ul{
     list-style-type: none;
