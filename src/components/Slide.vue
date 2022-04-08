@@ -117,7 +117,7 @@ div.my-carousel-images .item.active {
 div.my-carousel-images img {
     height: 100%;
     width: 100%;
-    max-height: 350px;
+    max-height: 400px;
     border: 2px solid gold;
 }
 div.carousel-text{

@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="contact-content text-center">
-            <div class="my-container col-6 m-auto">
+            <div class="my-custom-container col-6 m-auto">
                 <h4>Want to work with us? Send us <span>a message!</span></h4>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure perferendis culpa maxime eius itaque ducimus exercitationem natus nam quibusdam! Doloremque ipsum quis cumque velit, perferendis eaque et enim libero est!</p>
                 <button class="custom-button">Contact</button>
@@ -53,10 +53,21 @@ div.my-container{
 }
 div.contact-content{
     border: 2px solid navy;
+    background-image: url('../../public/images/h-2-background-1.jpg');
+    background-size: contain;
+    height: 300px;
 }
 .custom-button{
     background-color:rgb(216, 240, 227) ;
     width: 150px;
+    align-self: center;
 }
+div.my-custom-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 </style>
