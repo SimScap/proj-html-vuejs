@@ -10,7 +10,7 @@
                             <div class="carousel-text col-3 text-start">
                                 <p class="fs-1">Devotion that never <span class="fw-bold fst-italic">ends</span> </p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod Lorem ipsum dolor </p>
-                                <button class="btn fw-bold">READ MORE</button>
+                                <button class="fw-bold p-2">READ MORE</button>
                             </div>
                             <div class="item col-7" v-for="(element, index) in images" :key="index"
                                 :class="(index == activeElement) ? 'active' : '' ">
@@ -124,6 +124,7 @@ div.carousel-text{
     border: 2px solid black;
 }
 button{
-    border: 1px solid brown;
+    border: 2px solid brown;
+    background-color: white;
 }
 </style>
