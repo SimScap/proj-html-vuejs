@@ -7,7 +7,7 @@
                     <div class="my-carousel-container d-flex flex-column col-11 m-auto" id="my-carousel">
                         <div class="my-carousel-images d-flex justify-content-end">
                             <!-- immagini -->
-                            <div class="carousel-text col-3 text-start">
+                            <div class="carousel-text col-4 text-start">
                                 <p class="fs-1">Devotion that never <span class="fw-bold fst-italic">ends</span> </p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod Lorem ipsum dolor </p>
                                 <button class="fw-bold p-2">READ MORE</button>

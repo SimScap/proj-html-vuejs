@@ -1,10 +1,14 @@
 <template>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-8 my-container m-auto text-center">
-            <h4>Working Process</h4>
-            <div class="process-container">
-                <p>lorem</p>
+    <div class="col-8 my-container m-auto text-center">
+        <h4>Working Process</h4>
+        <div class="process-container d-flex">
+            <div class="process-card">
+                <div class="process-card-logo d-flex justify-content-center">
+                    <span class="align-self-center fs-1"><font-awesome-icon icon="fa-solid fa-lightbulb"/></span>
+                </div>
+            </div>
             </div>
         </div>
         <div class="contact-content text-center">
@@ -68,6 +72,23 @@ div.my-custom-container{
     flex-direction: column;
     justify-content: center;
 }
-
+div.process-container{
+    background-image: url('../../public/images/svg-3.svg');
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div.process-card{
+border: 2px solid green;
+width: calc(100% / 6);
+}
+div.process-card-logo{
+    background-color: rgb(250, 247, 242);
+    height: 100px;
+    border-radius: 50%;
+}
+.fa-lightbulb{
+    color: rgb(186, 218, 201);
+}
 
 </style>
