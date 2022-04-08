@@ -1,7 +1,9 @@
 <template>
 <div class="container-fluid">
     <ul id=menu>
-        <li><a href="#"><img src="/images/svg-7.svg" alt="" class="img-fluid bg-light"></a></li>
+        <li class="mb-3"><a href="#"><img src="/images/svg-7.svg" alt="" class="img-fluid bg-light"></a></li>
+        <li><a href="#"><img src="/images/svg-6.svg" alt="" class="img-fluid bg-light"></a></li>
+
     </ul>
     <div class="row">
         <div class="col-4 p-0" v-for="(img, index) in JumboList" :key="index">
