@@ -4,10 +4,12 @@
     <div class="col-8 my-container m-auto text-center">
         <h4>Working Process</h4>
         <div class="process-container d-flex">
-            <div class="process-card">
-                <div class="process-card-logo d-flex justify-content-center">
-                    <span class="align-self-center fs-1"><font-awesome-icon icon="fa-solid fa-lightbulb"/></span>
+            <div class="process-card align-self-end " v-for="(process, index) in processList" :key="index">
+                <div class="process-card-logo d-flex justify-content-center m-auto">
+                    <span class="align-self-center fs-1"><font-awesome-icon :icon="process.fontAwe" /></span>
                 </div>
+                    <h6>{{process.title}}</h6>
+                    <p>{{process.text}}</p>
             </div>
             </div>
         </div>
@@ -16,7 +18,7 @@
                 <h4>Want to work with us? Send us <span>a message!</span></h4>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure perferendis culpa maxime eius itaque ducimus exercitationem natus nam quibusdam! Doloremque ipsum quis cumque velit, perferendis eaque et enim libero est!</p>
                 <button class="custom-button">Contact</button>
-            </div>         
+            </div>                    
         </div>
         <div class="event-content">
 
@@ -44,6 +46,27 @@ export default {
             img: "h-2-blog-img-3.jpg",
             text:"Introduce Richard Laperrière of those amazing features",
             author:"By Emily Fields",
+        },
+        ],
+        processList: [{
+            fontAwe: "fa-solid fa-lightbulb",
+            title: "First theres an idea",
+            text: "Lorem ipsum sit conetu adipisc sed be et ore aligua pleasure itself",
+        },
+        {
+            fontAwe: "...",
+            title: "Then we talg about",
+            text: "Lorem ipsum sit conetu adipisc sed be et ore aligua pleasure itself",
+        },
+        {
+            fontAwe: "...",
+            title: "And we think about",
+            text: "Lorem ipsum sit conetu adipisc sed be et ore aligua pleasure itself",
+        },
+        {
+            fontAwe: "...",
+            title: "So we draw along",
+            text: "Lorem ipsum sit conetu adipisc sed be et ore aligua pleasure itself",
         },
         ],
         }
@@ -74,18 +97,20 @@ div.my-custom-container{
 }
 div.process-container{
     background-image: url('../../public/images/svg-3.svg');
-    height: 200px;
+    height: 300px;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 90%;
 }
 div.process-card{
 border: 2px solid green;
-width: calc(100% / 6);
+
 }
 div.process-card-logo{
     background-color: rgb(250, 247, 242);
-    height: 100px;
+    height: 130px;
     border-radius: 50%;
+    width: 130px;
 }
 .fa-lightbulb{
     color: rgb(186, 218, 201);
