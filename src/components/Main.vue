@@ -1,10 +1,10 @@
 <template>
 <div class="container-fluid">
     <div class="row">
-    <div class="col-8 my-container m-auto text-center">
+    <div class="col-12 my-container m-auto text-center p-5">
         <h4>Working Process</h4>
         <div class="process-container d-flex">
-            <div class="process-card align-self-end " v-for="(process, index) in processList" :key="index">
+            <div class="process-card align-self-end col-3 " v-for="(process, index) in processList" :key="index">
                 <div class="process-card-logo d-flex justify-content-center m-auto">
                     <span class="align-self-center fs-1"><font-awesome-icon :icon="process.fontAwe" /></span>
                 </div>
@@ -54,7 +54,7 @@ export default {
             text: "Lorem ipsum sit conetu adipisc sed be et ore aligua pleasure itself",
         },
         {
-            fontAwe: "...",
+            fontAwe: "",
             title: "Then we talg about",
             text: "Lorem ipsum sit conetu adipisc sed be et ore aligua pleasure itself",
         },
@@ -81,8 +81,9 @@ div.my-container{
 div.contact-content{
     border: 2px solid navy;
     background-image: url('../../public/images/h-2-background-1.jpg');
-    background-size: contain;
-    height: 300px;
+    background-size: cover;
+    height: 330px;
+    background-position: center;
 }
 .custom-button{
     background-color:rgb(216, 240, 227) ;
@@ -100,11 +101,10 @@ div.process-container{
     height: 300px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 90%;
+    background-size: 80%;
 }
 div.process-card{
 border: 2px solid green;
-
 }
 div.process-card-logo{
     background-color: rgb(250, 247, 242);

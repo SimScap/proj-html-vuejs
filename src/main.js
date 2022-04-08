@@ -9,6 +9,7 @@ library.add(faUserSecret)
 library.add(faLightbulb)
 
 
+
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
