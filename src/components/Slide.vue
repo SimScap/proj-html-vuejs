@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid position-relative">
+<div class="container-fluid position-relative mb-2">
             <div id="" class="row text-center">
                 <div class="col-12 p-3" id="my-before-carousel">
                 </div>
@@ -10,7 +10,7 @@
                             <div class="carousel-text col-3 text-start">
                                 <p class="fs-1">Devotion that never <span class="fw-bold fst-italic">ends</span> </p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod Lorem ipsum dolor </p>
-                                <button class="btn btn-light fw-bold">READ MORE</button>
+                                <button class="btn fw-bold">READ MORE</button>
                             </div>
                             <div class="item col-7" v-for="(element, index) in images" :key="index"
                                 :class="(index == activeElement) ? 'active' : '' ">
@@ -44,24 +44,11 @@ data: function(){
             image:"h-2-slider-img-11.png"
         },
         {
-            image:"h-2-slider-img-12.png"
-        },
-        {
-            image:"h-2-slider-img-13.png"
-        },
-        {
-            image:"h-2-slider-img-14.png"
-        },
-        {
             image:"h-2-slider-img-15.png"
         },
         {
             image:"h-2-slider-img-16.png"
-        },
-        {
-            image:"h-2-slider-img-17.png"
-        },
-            
+        },           
         ],
     }
 },
@@ -85,18 +72,13 @@ methods: {
 
 
 <style scoped lang="scss">
-body {
-    font-family: "Montserrat", sans-serif;
-}
-
 div.my-carousel-container {
     border: 2px solid green;
 }
-
 div.my-previous,
 div.my-next {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
     padding: 5px;
     background-color: rgba(255, 255, 255, .5);
@@ -104,44 +86,34 @@ div.my-next {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    border: 2px solid black;
+    background-color: #F5D8CA;
+    line-height: 20px;
 }
-
 div.my-previous {
     left: .3rem;
 }
-
 div.my-next {
     right: .3rem;
 }
-
 div.my-previous>span::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "O";
-    line-height: 30px;
+    font-size: 1.5rem ;
+    content: "<";
+    line-height: 10px;
+    color: white;
 }
-
 div.my-next>span::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "O";
-    line-height: 30px;
+    font-size: 1.5rem;
+    content: ">";
+    line-height: 10px;
+    color: white;
 }
-
-
-/* modifica css */
-
 div.my-carousel-images .item {
     position: relative;
     display: none;
 }
-
-
 div.my-carousel-images .item.active {
     display: block;
 }
-
 div.my-carousel-images img {
     height: 100%;
     width: 100%;
