@@ -8,7 +8,7 @@
         <div class="col-4 p-0 position-relative hova-container" v-for="(img, index) in JumboList" :key="index ">
             <img :src="'./images/' + img.imgName" :alt="img.alt" class="img-fluid">
             <div class="text ">
-                <h6>{{img.text}}</h6>
+                <h6 class="fw-bold">{{img.text}}</h6>
                 <p>{{img.secondaryText}}</p>
         </div>            
         </div>
@@ -80,10 +80,11 @@ z-index: 3;
 position: absolute;
 bottom: 30%;
 left: 0;
-background: black;
-color: white;
+background: white;
+color: black;
 opacity: 0;
 display: none;
+transition: 1ms;
 -webkit-transition: visibility 0s, opacity 0.5s linear;  
 }
 .hova-container:hover .text
@@ -91,6 +92,6 @@ display: none;
 width: 200px;
 padding: 8px 15px;
 display:block;
-opacity: 0.7;  
+opacity: 1;  
     }
 </style>

@@ -5,12 +5,12 @@
                     <div class="my-carousel-container d-flex flex-column col-11 m-auto" id="my-carousel">
                         <div class="my-carousel-images d-flex justify-content-center">
                             <!-- immagini -->
-                            <div class="carousel-text col-5 text-start p-3">
+                            <div class="carousel-text col-4 text-start p-3">
                                 <p class="fs-1">Devotion that never <span class="fw-bold fst-italic">ends</span> </p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod Lorem ipsum dolor </p>
                                 <button class="fw-bold p-2">READ MORE</button>
                             </div>
-                            <div class="item col-7 p-3 " v-for="(element, index) in images" :key="index"
+                            <div class="item col-8 p-3 " v-for="(element, index) in images" :key="index"
                                 :class="(index == activeElement) ? 'active' : '' ">
                                 <img class="img-fluid " :src="'./images/' + element.image" :alt="element.title">
                             </div>
@@ -36,14 +36,17 @@ data: function(){
     return{
         activeElement: 1,
         images: [{
-            image:"h-2-slider-img-11.png"
-        },
-        {
-            image:"h-2-slider-img-15.png"
-        },
-        {
             image:"h-2-slider-img-16.png"
-        },           
+        },
+        {
+            image:"h-2-slider-img-11.png",
+        },
+        {
+            image:"short-slider-rev-1-img-3.png",
+        },            
+        {
+            image:"h-2-slider-img-15.png",
+        },          
         ],
     }
 },
