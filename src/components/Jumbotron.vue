@@ -6,10 +6,10 @@
     </ul>
     <div class="row">
         <div class="col-4 p-0 position-relative hova-container" v-for="(img, index) in JumboList" :key="index ">
-            <img :src="'./images/' + img.imgName" :alt="img.text" class="img-fluid">
+            <img :src="'./images/' + img.imgName" :alt="img.alt" class="img-fluid">
             <div class="text ">
-                The tiger is the largest cat species, reaching a
-                total 
+                <h6>{{img.text}}</h6>
+                <p>{{img.secondaryText}}</p>
         </div>            
         </div>
     </div>
@@ -23,27 +23,39 @@ export default {
         return{
             JumboList : [{
                 imgName:"h-2-port-img-1.jpg",
-                text:"Jumbotron Pic",
+                alt:"Jumbotron Pic",
+                text:"All these illustrations",
+                secondaryText: "Illustrations",
             },
             {
                 imgName:"h-2-port-img-2.jpg",
-                text:"Jumbotron Pic",
+                alt:"Jumbotron Pic",
+                text:"Type and illustrations",
+                secondaryText: "Illustrations",
             },
             {
                 imgName:"h-2-port-img-3.jpg",
-                text:"Jumbotron Pic",
+                alt:"Jumbotron Pic",
+                text:"Draw and illustrate",
+                secondaryText: "Illustrations",
             },
             {
                 imgName:"h-2-port-img-4.jpg",
-                text:"Jumbotron Pic",
+                alt:"Jumbotron Pic",
+                text:"Illustrations of novels",
+                secondaryText: "Illustrations",
             },
             {
                 imgName:"h-2-port-img-5.jpg",
-                text:"Jumbotron Pic",
+                alt:"Jumbotron Pic",
+                text:"To many illustrations",
+                secondaryText: "Illustrations",
             },
             {
                 imgName:"h-2-port-img-6.jpg",
-                text:"Jumbotron Pic",
+                alt:"Jumbotron Pic",
+                text:"Dreams are illustrations",
+                secondaryText: "Illustrations",
             },
         ],
         }
@@ -70,16 +82,13 @@ bottom: 30%;
 left: 0;
 background: black;
 color: white;
-margin-bottom: 5px;
-font-family: sans-serif;
 opacity: 0;
 display: none;
--webkit-transition: visibility 0s, opacity 0.5s linear; 
-transition: visibility 0s, opacity 0.5s linear;  
+-webkit-transition: visibility 0s, opacity 0.5s linear;  
 }
 .hova-container:hover .text
     {
-width: 150px;
+width: 200px;
 padding: 8px 15px;
 display:block;
 opacity: 0.7;  
