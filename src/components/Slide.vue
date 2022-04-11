@@ -14,7 +14,7 @@
                             </div>
                             <div class="item col-8 p-3 " v-for="(element, index) in images" :key="index"
                                 :class="(index == activeElement) ? 'active' : '' ">
-                                <img class="img-fluid " :src="'./images/' + element.image" :alt="element.title">
+                                <img class="img-fluid" :src="'./images/' + element.image" :alt="element.title">
                             </div>
                             <div class="firstFixedImg">
                                 <img src="/images/h-2-slider-img-13.png" alt="" class="img-fluid w-75">
@@ -209,6 +209,7 @@ div.my-carousel-images img {
 button{
     border: 2px solid brown;
     background-color: white;
+    width: 180px;
 }
 img.slide-small-img{
     background-color: red;
