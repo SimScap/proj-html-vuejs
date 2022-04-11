@@ -15,24 +15,24 @@
                                 <img class="img-fluid " :src="'./images/' + element.image" :alt="element.title">
                             </div>
                             <div class="firstFixedImg">
-                                <img src="/images/h-2-slider-img-13.png" alt="" class="img-fluid">
+                                <img src="/images/h-2-slider-img-13.png" alt="" class="img-fluid w-75">
                             </div>
                             <div class="secondFixedImg">
-                                <img src="/images/h-2-slider-img-12.png" alt="" class="img-fluid">
+                                <img src="/images/h-2-slider-img-12.png" alt="" class="img-fluid w-75">
                             </div>
                             <div class="thirdFixedImg">
-                                <img src="/images/short-slider-rev-1-img-2.png" alt="" class="img-fluid">
+                                <img src="/images/short-slider-rev-1-img-2.png" alt="" class="img-fluid w-75">
                             </div>
                             <div class="fourthFixedImg">
-                                <img src="/images/h-2-slider-img-14.png" alt="" class="img-fluid">
+                                <img src="/images/h-2-slider-img-14.png" alt="" class="img-fluid w-75">
                             </div>
                             <div class="fifthFixedImg">
-                                <img src="/images/short-slider-rev-1-img-6.png" alt="" class="img-fluid">
+                                <img src="/images/short-slider-rev-1-img-6.png" alt="" class="img-fluid w-75">
                             </div>
                             <div class="sixthFixedImg">
-                                <img src="/images/h-2-slider-img-17.png" alt="" class="img-fluid">
+                                <img src="/images/h-2-slider-img-17.png" alt="" class="img-fluid w-75">
                             </div>
-                        </div>    
+                            </div>    
                             <!-- prev -->
                             <div class="my-previous position-absolute">
                                 <span class="my-prev-hook" @click="prevSlide()"></span>

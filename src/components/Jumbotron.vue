@@ -1,11 +1,14 @@
 <template>
 <div class="container-fluid">
     <ul id=menu>
-        <li class="mb-3  bg-light"><a href="#"><img src="/images/svg-7.svg" alt="" class="img-fluid "></a></li>
-        <li class="p-1 bg-light"><a href="#"><img src="/images/svg-6.svg" alt="" class="img-fluid "></a></li>
+        <li class="mb-3 custom-icon text-white"><a><img src="/images/svg-7.svg" alt="" class="img-fluid "></a></li>
+        <li class="p-1 bg-light"><a><img src="/images/svg-6.svg" alt="" class="img-fluid "></a></li>
     </ul>
     <ul id=toTheTopMenu>
-        <li><a href="#top">O</a></li>
+        <li><a href="#top" class="text-white custom-awesome p-1">
+                <font-awesome-icon :icon="['fas', 'arrow-up']" />
+            </a>
+        </li>
     </ul>
     <div class="row">
         <div class="col-4 p-0 position-relative hova-container" v-for="(img, index) in JumboList" :key="index ">
@@ -74,7 +77,7 @@ export default {
 #menu{
 position: fixed;
 right: 0;
-width: 4em;
+width: 3.8em;
 border: 2px solid magenta;
 list-style-type: none;
 z-index: 3;
@@ -103,4 +106,11 @@ padding: 8px 15px;
 display:block;
 opacity: 1;  
     }
+li.custom-icon{
+    background: red;
+    filter: brightness(8);
+}
+a.custom-awesome{
+    background-color: rgb(192, 225, 207);
+}
 </style>

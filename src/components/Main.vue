@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <div class="row">
     <div class="col-12 my-container m-auto text-center p-5">
-        <h4>Working <span class="fst-italic fw-bold">Process</span> </h4>
+        <h4 class="fs-1">Working <span class="fst-italic fw-bold">Process</span> </h4>
         <div class="process-container d-flex m-auto col-10 justify-content-around">
             <div class="process-card align-self-end " v-for="(process, index) in processList" :key="index">
                 <div class="process-card-logo d-flex justify-content-center m-auto mb-3">
@@ -28,9 +28,8 @@
             <p class="card-text">{{event.author}}</p>
     </div>
 </div>
-
-        </div>
-    </div>
+</div>
+</div>
 </div> 
 </template>
 
@@ -96,6 +95,10 @@ div.contact-content{
     background-color:rgb(216, 240, 227) ;
     width: 150px;
     align-self: center;
+}
+.custom-button:hover{
+    background-color: rgb(225, 192, 176);
+    transition: background-color 1s;
 }
 div.my-custom-container{
     height: 100%;
