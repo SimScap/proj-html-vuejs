@@ -7,7 +7,7 @@
         </div>
           <nav class="header-nav col-6">
             <ul class="d-flex justify-content-between fw-bold">
-              <li v-for="(headerLink, index) in NavList" :key="index">
+              <li v-for="(headerLink, index) in NavList" :key="index" :class="(index === activeIndex) ? 'active' : ''">
                 <a href="#" name="top">{{headerLink.link}}</a>
               </li>
               <li>
@@ -71,7 +71,8 @@ ul{
     text-decoration: none;
     color: black;
 }
-ul li:hover{
+ul li:active{
   border-bottom: 4px solid pink;
 }
+
 </style>

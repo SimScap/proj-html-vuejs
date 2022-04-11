@@ -45,8 +45,8 @@
                     </div>
                 </div>
             </div>
-            <ul class="d-flex col-2 m-auto justify-content-evenly dots">
-                <li v-for="(dots, index) in images" :key="index" 
+            <ul class="d-flex col-2 m-auto justify-content-evenly ">
+                <li class="dots" v-for="(dots, index) in images" :key="index" 
                     :class="(index === activeElement) ? 'active' : ''"
                     @click="changeSlide(index)"><font-awesome-icon :icon="['fas', 'fa-circle']" size="xs" /></li>
             </ul>                        
@@ -60,10 +60,10 @@ data: function(){
     return{
         activeElement: 1,
         images: [{
-            image:"h-2-slider-img-16.png"
+            image:"h-2-slider-img-16.png",
         },
         {
-            image:"h-2-slider-img-11.png",
+            image:"h-2-slider-img-11.png",  
         },
         {
             image:"short-slider-rev-1-img-3.png",
@@ -181,10 +181,12 @@ img.slide-small-img{
 ul{
     list-style-type: none;
 }
-.dots{
+li.dots{
     color: rgb(225, 192, 176);
+    filter: brightness(.7);
 }
-.dots.active{
-    color: aqua;
+li.dots.active{
+    filter:brightness(1);
+    font-size: 1.1rem;
 }
 </style>
