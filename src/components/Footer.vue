@@ -38,9 +38,6 @@ export default {
 div.container-fluid{
     background-color: #C0E1CF;
 }
-div.footer-container{
-    border: 2px solid black;
-}
 ul{
     list-style-type: none;
 }

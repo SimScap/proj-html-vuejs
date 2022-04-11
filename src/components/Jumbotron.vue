@@ -70,15 +70,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.row{
-    border: 2px solid purple;
-}
 #toTheTopMenu,
 #menu{
 position: fixed;
 right: 0;
 width: 3.8em;
-border: 2px solid magenta;
 list-style-type: none;
 z-index: 3;
 }

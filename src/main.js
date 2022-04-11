@@ -8,6 +8,7 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { faComment } from '@fortawesome/free-solid-svg-icons'
 import { faCloud } from '@fortawesome/free-solid-svg-icons'
 import { faPen } from '@fortawesome/free-solid-svg-icons'
@@ -25,6 +26,8 @@ library.add(faTwitter)
 library.add(faPinterest)
 library.add(faFacebook)
 library.add(faLinkedin)
+library.add(faCircle)
+
 
 
 

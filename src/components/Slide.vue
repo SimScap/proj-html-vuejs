@@ -40,10 +40,16 @@
                             <!-- next -->
                             <div class="my-next position-absolute">
                                 <span class="my-next-hook" @click="nextSlide()"></span>
-                            </div>       
+                            </div>
+                            <!--Dots-->  
                     </div>
                 </div>
             </div>
+            <ul class="d-flex col-2 m-auto justify-content-evenly dots">
+                <li v-for="(dots, index) in images" :key="index" 
+                    :class="(index === activeElement) ? 'active' : ''"
+                    @click="changeSlide(index)"><font-awesome-icon :icon="['fas', 'fa-circle']" size="xs" /></li>
+            </ul>                        
         </div>
 </template>
 
@@ -83,6 +89,9 @@ methods: {
                 this.activeElement--;
             }
         },
+        changeSlide(imageIndex){
+            if ( this.images[imageIndex] !== undefined ) this.activeElement = imageIndex;
+        },
 }}
 </script>
 
@@ -117,9 +126,6 @@ div.fifthFixedImg{
 div.sixthFixedImg{
     right: 5%;
     top: 65%;
-}
-div.my-carousel-container {
-    border: 2px solid green;
 }
 div.my-previous,
 div.my-next {
@@ -164,10 +170,6 @@ div.my-carousel-images img {
     height: 100%;
     width: 100%;
     max-height: 400px;
-    border: 2px solid gold;
-}
-div.carousel-text{
-    border: 2px solid black;
 }
 button{
     border: 2px solid brown;
@@ -175,5 +177,14 @@ button{
 }
 img.slide-small-img{
     background-color: red;
+}
+ul{
+    list-style-type: none;
+}
+.dots{
+    color: rgb(225, 192, 176);
+}
+.dots.active{
+    color: aqua;
 }
 </style>

@@ -81,11 +81,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-div.my-container{
-    border: 2px solid black;
-}
 div.contact-content{
-    border: 2px solid navy;
     background-image: url('../../public/images/h-2-background-1.jpg');
     background-size: cover;
     height: 330px;
@@ -112,10 +108,8 @@ div.process-container{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 75% ;
-    border: 2px solid orange;
 }
 div.process-card{
-border: 2px solid green;
 width: 200px;
 }
 div.process-card-logo{
@@ -123,10 +117,6 @@ div.process-card-logo{
     height: 130px;
     border-radius: 50%;
     width: 130px;
-}
-div.event-content{
-    border: 2px solid magenta;
-    
 }
 .fa-lightbulb{
     color: rgb(186, 218, 201);
