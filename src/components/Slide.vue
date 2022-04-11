@@ -2,7 +2,9 @@
 <div class="container-fluid position-relative mb-2 p-3">
             <div id="" class="row text-center">
                 <div class="col-12">
-                    <div class="my-carousel-container d-flex flex-column col-11 m-auto" id="my-carousel">
+                    <div class="my-carousel-container d-flex flex-column col-11 m-auto" id="my-carousel"
+                    @mouseleave="autoScroll"
+                    @mouseover="stopScroll">
                         <div class="my-carousel-images d-flex justify-content-center">
                             <!-- immagini -->
                             <div class="carousel-text col-4 text-start p-3">
@@ -59,6 +61,9 @@ name: 'SlideContent',
 data: function(){
     return{
         activeElement: 1,
+        hasAutoScroll : null,
+        isAutoScrollActive : true,
+        isNextDirection : true,
         images: [{
             image:"h-2-slider-img-16.png",
         },
@@ -91,6 +96,26 @@ methods: {
         },
         changeSlide(imageIndex){
             if ( this.images[imageIndex] !== undefined ) this.activeElement = imageIndex;
+        },
+        autoScroll(){
+            if (this.isAutoScrollActive){
+                console.warn('Scroll partito');
+                this.hasAutoScroll = setInterval(() => {
+                    if (this.isNextDirection){
+                        this.nextSlide();
+                    } else {
+                        this.previousSlide();
+                    }
+                }, 3000);
+            } else {
+                console.log('Scroll non attivo, funzione chiamata senza inizializzazione dell\'autoscroll')
+            }
+
+        },
+        stopScroll(){
+            clearInterval(this.hasAutoScroll);
+            console.warn('Scroll interrotto');
+            this.hasAutoScroll = null;
         },
 }}
 </script>
