@@ -95,7 +95,9 @@ display: none;
 transition: 1ms;
 -webkit-transition: visibility 0s, opacity 0.5s linear;  
 }
-.hova-container:hover .text{
+
+.hova-container:hover .text
+    {
 width: 200px;
 padding: 8px 15px;
 display:block;
@@ -103,6 +105,7 @@ opacity: 1;
     }
 li.custom-icon{
     filter: brightness(8);
+    background-color: red;
 }
 a.custom-awesome{
     background-color: rgb(192, 225, 207);
