@@ -7,19 +7,21 @@
                 <li>Let's Get Creative</li>
             </ul>           
             <ul>
-                <li><a href="#">maree.qode@gmail.com</a></li>
-                <li><a href="#">+44645 321 789</a></li>
+                <li><a>maree.qode@gmail.com</a></li>
+                <li><a>+44645 321 789</a></li>
             </ul>
             <ul>
-                <li><a href="#">Avenue d'Auderghem 10</a></li>
-                <li><a href="#">1040 Brussels, Belgium</a></li>
+                <li><a>Avenue d'Auderghem 10</a></li>
+                <li><a>1040 Brussels, Belgium</a></li>
             </ul>            
             <ul>
-                <li><a href="#">Stay in touch with us</a></li>
-                <li>ff</li>
-                <li>ff</li>
-                <li>ff</li>
-                <li>ff</li>
+                <li><a>Stay in touch with us</a></li>
+                <ul class="social-logos">
+                <li><font-awesome-icon :icon="['fab', 'twitter']" /></li>
+                <li><font-awesome-icon :icon="['fab', 'pinterest']" /></li>
+                <li><font-awesome-icon :icon="['fab', 'facebook']" /></li>
+                <li><font-awesome-icon :icon="['fab', 'linkedin']" /></li>
+                </ul>             
             </ul>
         </div>
     </div>
@@ -29,7 +31,6 @@
 <script>
 export default {
     name: "FooterContent"
-
 }
 </script>
 
@@ -42,6 +43,12 @@ div.footer-container{
 }
 ul{
     list-style-type: none;
+}
+ul.social-logos{
+    display: inline-flex;
+}
+ul.social-logos li{
+    margin-right: 1rem;
 }
 </style>
 

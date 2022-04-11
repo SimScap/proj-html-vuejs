@@ -1,6 +1,6 @@
 <template>
 <header>
-  <div class="container-fluid p-3 ">
+  <div class="container-fluid p-2">
     <div class="row justify-content-between">
       <div class="header-logo col-1">
         <img src="/images/logo-sidearea-1.png" alt="" class="my-logo-size">
@@ -10,7 +10,9 @@
               <li v-for="(headerLink, index) in NavList" :key="index">
                 <a href="#" name="top">{{headerLink.link}}</a>
               </li>
-              <img src="/images/svg-1.svg" alt="" class="img-fluid">
+              <li>
+                <img src="/images/svg-1.svg" alt="" class="img-fluid">
+              </li>          
             </ul>
           </nav>
       </div>
@@ -63,9 +65,13 @@ div.container-fluid{
 }
 ul{
     list-style-type: none;
+    height: 100%;
   }
   a{
     text-decoration: none;
     color: black;
+}
+ul li:hover{
+  border-bottom: 4px solid pink;
 }
 </style>
