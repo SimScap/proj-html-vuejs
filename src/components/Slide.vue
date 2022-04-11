@@ -104,6 +104,16 @@ div.firstFixedImg,
 .fifthFixedImg,
 .sixthFixedImg{
     position: absolute;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from{
+        margin-top: 100%;
+    }
+    to{
+        margin-top: 0%;
+    } 
 }
 div.firstFixedImg{
     top: 75%;
