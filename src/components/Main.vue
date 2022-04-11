@@ -3,7 +3,7 @@
     <div class="row">
     <div class="col-12 my-container m-auto text-center p-5">
         <h4>Working <span class="fst-italic fw-bold">Process</span> </h4>
-        <div class="process-container d-flex">
+        <div class="process-container d-flex m-auto col-10 justify-content-around">
             <div class="process-card align-self-end " v-for="(process, index) in processList" :key="index">
                 <div class="process-card-logo d-flex justify-content-center m-auto mb-3">
                     <span class="align-self-center fs-1"><font-awesome-icon :icon="process.fontAwe" /></span>
@@ -15,12 +15,20 @@
         </div>
         <div class="contact-content text-center">
             <div class="my-custom-container col-6 m-auto">
-                <h4>Want to work with us? Send us <span>a message!</span></h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure perferendis culpa maxime eius itaque ducimus exercitationem natus nam quibusdam! Doloremque ipsum quis cumque velit, perferendis eaque et enim libero est!</p>
+                <h4 class="mb-5">Want to work with us? Send us <span class="fst-italic fw-bold">a message!</span></h4>
+                <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure perferendis culpa maxime eius itaque ducimus exercitationem natus nam quibusdam! Doloremque ipsum quis cumque velit, perferendis eaque et enim libero est!</p>
                 <button class="custom-button">Contact</button>
             </div>                    
         </div>
-        <div class="event-content">
+        <div class="event-content col-10 m-auto d-flex justify-content-between">
+        <div class="card p-3" v-for="(event, index) in eventList" :key="index" >
+            <img :src="'./images/' + event.img" class="card-img-top">
+            <div class="card-body">
+            <h5 class="card-title">{{event.text}}</h5>
+            <p class="card-text">{{event.author}}</p>
+    </div>
+</div>
+
         </div>
     </div>
 </div> 
@@ -97,20 +105,25 @@ div.my-custom-container{
 }
 div.process-container{
     background-image: url('../../public/images/svg-3.svg');
-    height: 300px;
+    height: 350px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 75%;
+    background-size: 75% ;
+    border: 2px solid orange;
 }
 div.process-card{
 border: 2px solid green;
-width: 25%;
+width: 200px;
 }
 div.process-card-logo{
     background-color: rgb(250, 247, 242);
     height: 130px;
     border-radius: 50%;
     width: 130px;
+}
+div.event-content{
+    border: 2px solid magenta;
+    
 }
 .fa-lightbulb{
     color: rgb(186, 218, 201);
@@ -124,5 +137,7 @@ div.process-card-logo{
 .fa-pen{
     color: rgb(234, 90, 55);
 }
-
+.card{
+    border: none;
+}
 </style>
