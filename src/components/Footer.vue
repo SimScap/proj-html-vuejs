@@ -67,5 +67,8 @@ a:hover:before {
 visibility: visible;
 transform: scaleX(1);
 }
+img{
+    width: 120px;
+}
 </style>
 

@@ -20,9 +20,9 @@
                 <button class="custom-button">Contact</button>
             </div>                    
         </div>
-        <div class="event-content col-10 m-auto d-flex justify-content-between position-relative">
-        <div class="card p-3" v-for="(event, index) in eventList" :key="index" >
-            <img :src="'./images/' + event.img" class="card-img-top">
+        <div class="event-content col-10 m-auto d-flex justify-content-between">
+        <div class="card p-3 " v-for="(event, index) in eventList" :key="index" >
+                <img :src="'./images/' + event.img" class="card-img-top fix-width">
             <div class="card-body">
             <h5 class="card-title">{{event.text}}</h5>
             <p class="card-text">{{event.author}}</p>
@@ -83,6 +83,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.fix-width{
+    max-width: 500px;
+}
 div.contact-content{
     background-image: url('../../public/images/h-2-background-1.jpg');
     background-size: cover;
@@ -153,6 +156,6 @@ div.event-date{
     right: 65%;
     font-size: .7rem;
     padding-top: .5rem;
-    border-radius: 10px 10px;
+    border-radius: 0px 0px 100% 100%;
 }
 </style>
