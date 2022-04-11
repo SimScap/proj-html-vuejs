@@ -82,13 +82,12 @@ div.container-fluid{
 ul{
     list-style-type: none;
     height: 100%;
-  }
-  a{
+}
+a{
     text-decoration: none;
     color: black;
 }
 ul li.active{
   border-bottom: 4px solid pink;
 }
-
 </style>
