@@ -7,8 +7,8 @@
         </div>
           <nav class="header-nav col-6">
             <ul class="d-flex justify-content-between fw-bold">
-              <li v-for="(headerLink, index) in NavList" :key="index" :class="(index === activeIndex) ? 'active' : ''">
-                <a href="#" name="top">{{headerLink.link}}</a>
+              <li v-for="(headerLink, index) in NavList" :key="index" @click="setActivePage(index)" :class="{ active: headerLink.current}">
+                <a :href="headerLink.url" name="top">{{headerLink.link}}</a>
               </li>
               <li>
                 <img src="/images/svg-1.svg" alt="" class="img-fluid">
@@ -28,30 +28,46 @@ export default {
       NavList: [{
         link:"HOME",
         url : "#",
+        current: true,
       },
       {
         link:"PAGES",
         url : "#",
+        current: false,
       },
       {
         link:"PORTFOLIO",
         url : "#",
+        current: false,
       },
       {
         link:"BLOG",
         url : "#",
+        current: false,
       },
       {
         link:"SHOP",
         url : "#",
+        current: false,
       },
       {
         link:"ELEMENTS",
         url : "#",
+        current: false,
       },
       ],
     }
-  }
+  },
+  methods:{
+        setActivePage(baseIndex){
+            this.NavList.forEach((element, index) => {
+                if (baseIndex === index ){
+                    element.current = true;
+                } else {
+                    element.current = false;
+                }
+            });
+      }}
 }
 </script>
 
@@ -71,7 +87,7 @@ ul{
     text-decoration: none;
     color: black;
 }
-ul li:active{
+ul li.active{
   border-bottom: 4px solid pink;
 }
 
