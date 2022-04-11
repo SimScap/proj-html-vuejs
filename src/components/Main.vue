@@ -20,12 +20,14 @@
                 <button class="custom-button">Contact</button>
             </div>                    
         </div>
-        <div class="event-content col-10 m-auto d-flex justify-content-between">
+        <div class="event-content col-10 m-auto d-flex justify-content-between position-relative">
         <div class="card p-3" v-for="(event, index) in eventList" :key="index" >
             <img :src="'./images/' + event.img" class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">{{event.text}}</h5>
             <p class="card-text">{{event.author}}</p>
+            <div class="event-number text-center translate-middle fst-italic fw-bold">07</div>
+            <div class="event-date text-center translate-middle fst-italic fw-bold"><span>May'19</span></div>
     </div>
 </div>
 </div>
@@ -132,5 +134,25 @@ div.process-card-logo{
 }
 .card{
     border: none;
+}
+div.event-number{
+    width: 40px;
+    height: 30px;
+    background-color: rgb(192, 225, 207);
+    position: absolute;
+    top: 5%;
+    right: 65%;
+    z-index: 2;
+}
+div.event-date{
+    width: 40px;
+    height: 30px;
+    background-color: rgb(243, 208, 199);
+    position: absolute;
+    top: 12%;
+    right: 65%;
+    font-size: .7rem;
+    padding-top: .5rem;
+    border-radius: 10px 10px;
 }
 </style>
