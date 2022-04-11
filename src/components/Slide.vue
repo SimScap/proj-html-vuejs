@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid position-relative mb-2">
+<div class="container-fluid position-relative mb-2 p-3">
             <div id="" class="row text-center">
                 <div class="col-12">
                     <div class="my-carousel-container d-flex flex-column col-11 m-auto" id="my-carousel">
@@ -13,6 +13,24 @@
                             <div class="item col-8 p-3 " v-for="(element, index) in images" :key="index"
                                 :class="(index == activeElement) ? 'active' : '' ">
                                 <img class="img-fluid " :src="'./images/' + element.image" :alt="element.title">
+                            </div>
+                            <div class="firstFixedImg">
+                                <img src="/images/h-2-slider-img-13.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="secondFixedImg">
+                                <img src="/images/h-2-slider-img-12.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="thirdFixedImg">
+                                <img src="/images/short-slider-rev-1-img-2.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="fourthFixedImg">
+                                <img src="/images/h-2-slider-img-14.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="fifthFixedImg">
+                                <img src="/images/short-slider-rev-1-img-6.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="sixthFixedImg">
+                                <img src="/images/h-2-slider-img-17.png" alt="" class="img-fluid">
                             </div>
                         </div>    
                             <!-- prev -->
@@ -70,6 +88,36 @@ methods: {
 
 
 <style scoped lang="scss">
+div.firstFixedImg,
+.secondFixedImg,
+.thirdFixedImg,
+.fourthFixedImg,
+.fifthFixedImg,
+.sixthFixedImg{
+    position: absolute;
+}
+div.firstFixedImg{
+    top: 75%;
+    left: 38%;
+}
+div.secondFixedImg{
+    top: 35%;
+    left: 36%;
+}
+div.thirdFixedImg{
+    left: 36%;
+}
+div.fourthFixedImg{
+    right: 7%;
+}
+div.fifthFixedImg{
+    right: 5%;
+    top: 40%;
+}
+div.sixthFixedImg{
+    right: 5%;
+    top: 65%;
+}
 div.my-carousel-container {
     border: 2px solid green;
 }
@@ -124,5 +172,8 @@ div.carousel-text{
 button{
     border: 2px solid brown;
     background-color: white;
+}
+img.slide-small-img{
+    background-color: red;
 }
 </style>

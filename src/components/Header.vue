@@ -1,14 +1,14 @@
 <template>
 <header>
-  <div class="container-fluid p-2">
+  <div class="container-fluid p-3 ">
     <div class="row justify-content-between">
       <div class="header-logo col-1">
         <img src="/images/logo-sidearea-1.png" alt="" class="my-logo-size">
         </div>
           <nav class="header-nav col-6">
-            <ul class="d-flex justify-content-between">
+            <ul class="d-flex justify-content-between fw-bold">
               <li v-for="(headerLink, index) in NavList" :key="index">
-                <a href="#">{{headerLink.link}}</a>
+                <a href="#" name="top">{{headerLink.link}}</a>
               </li>
               <img src="/images/svg-1.svg" alt="" class="img-fluid">
             </ul>

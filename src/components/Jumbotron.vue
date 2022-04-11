@@ -4,6 +4,9 @@
         <li class="mb-3  bg-light"><a href="#"><img src="/images/svg-7.svg" alt="" class="img-fluid "></a></li>
         <li class="p-1 bg-light"><a href="#"><img src="/images/svg-6.svg" alt="" class="img-fluid "></a></li>
     </ul>
+    <ul id=toTheTopMenu>
+        <li><a href="#top">O</a></li>
+    </ul>
     <div class="row">
         <div class="col-4 p-0 position-relative hova-container" v-for="(img, index) in JumboList" :key="index ">
             <img :src="'./images/' + img.imgName" :alt="img.alt" class="img-fluid">
@@ -67,14 +70,20 @@ export default {
 .row{
     border: 2px solid purple;
 }
-#menu {
+#toTheTopMenu,
+#menu{
 position: fixed;
 right: 0;
-top: 10%;
 width: 4em;
 border: 2px solid magenta;
 list-style-type: none;
 z-index: 3;
+}
+#toTheTopMenu{
+top: 97%;
+}
+#menu {
+top: 10%;
 }
 .text{
 position: absolute;
