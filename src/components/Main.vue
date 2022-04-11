@@ -17,7 +17,7 @@
             <div class="my-custom-container col-6 m-auto">
                 <h4 class="mb-5">Want to work with us? Send us <span class="fst-italic fw-bold">a message!</span></h4>
                 <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure perferendis culpa maxime eius itaque ducimus exercitationem natus nam quibusdam! Doloremque ipsum quis cumque velit, perferendis eaque et enim libero est!</p>
-                <button class="custom-button">Contact</button>
+                <button class="custom-button p-2">Contact</button>
             </div>                    
         </div>
         <div class="event-content col-10 m-auto d-flex justify-content-between">
@@ -94,7 +94,7 @@ div.contact-content{
 }
 .custom-button{
     background-color:rgb(216, 240, 227) ;
-    width: 150px;
+    width: 180px;
     align-self: center;
 }
 .custom-button:hover{
